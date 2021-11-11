@@ -1,6 +1,7 @@
 package com.example.restoranapp
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,11 +14,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.myapplication.RecyclerViewAdapter
+import kotlinx.android.synthetic.main.discover_fragment.*
 
 class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
 
     private lateinit var adapter: RecyclerViewAdapter
     private lateinit var adapter2: RecyclerViewAdapter
+
     val listData: ArrayList<ulkeler> = ArrayList()
 
 
@@ -29,6 +32,8 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
         val view=inflater.inflate(R.layout.discover_fragment,container,false)
         buildDisplayData()
         initRecyclerView(view)
+
+
         return view
     }
 
@@ -62,7 +67,20 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
             }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        changebuton.setOnClickListener{
+            val intent = Intent (getActivity(), restoran_sayfa::class.java)
+            getActivity()?.startActivity(intent)
+        }
 
+        seeallbutton1.setOnClickListener{
+            val intent = Intent (getActivity(), seeall_sayfa::class.java)
+            getActivity()?.startActivity(intent)
+        }
+
+
+    }
 
     override fun onItemClick(dataModel: ulkeler) {
         TODO("Not yet implemented")

@@ -9,12 +9,76 @@
         android:id="@+id/restorancard_satir"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginRight="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="19dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/purple_200">
+            android:background="#202020">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/restoranarkaplan"
+                app:layout_constraintBottom_toTopOf="@+id/restoran_ad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="44dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="2dp"
+
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/restoranlogo1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lastchance" />
+
+                <TextView
+                    android:id="@+id/lastchance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/design_default_color_error"
+                    android:text="Last Chance"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@color/teal_700"
+                    android:text="20 TL"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/restoran_ad"
@@ -22,13 +86,35 @@
                 android:layout_height="25dp"
                 android:layout_marginTop="60dp"
                 android:layout_marginBottom="10dp"
-                android:text="restoran1"
+                android:text="Meta Mate"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.066"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.472" />
+
+            <TextView
+                android:id="@+id/restsiparistarih"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Today 16:00-20:00"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/restoran_ad"
+                app:layout_constraintTop_toBottomOf="@+id/restoran_ad" />
+
+            <TextView
+                android:id="@+id/restmesafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="2,3 km"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/restoran_ad"
+                app:layout_constraintTop_toBottomOf="@+id/restoran_ad" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
