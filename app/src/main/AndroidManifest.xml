@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restoranapp">
         <activity
+            android:name=".favorite_sayfa"
+            android:exported="true" />
+        <activity
             android:name=".seeall_sayfa"
             android:exported="true" />
         <activity

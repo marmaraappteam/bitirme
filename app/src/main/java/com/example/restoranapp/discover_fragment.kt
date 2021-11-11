@@ -83,7 +83,8 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
     }
 
     override fun onItemClick(dataModel: ulkeler) {
-        TODO("Not yet implemented")
+        val intent = Intent (getActivity(), restoran_sayfa::class.java)
+        getActivity()?.startActivity(intent)
     }
 
 }
