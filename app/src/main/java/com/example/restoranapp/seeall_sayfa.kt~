@@ -15,7 +15,7 @@ class seeall_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
 
     val listData: ArrayList<ulkeler> = ArrayList()
 
-    lateinit var baslik:String
+    var baslik:String = intent?.getStringExtra("title").toString()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,6 @@ class seeall_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
 
         buildDisplayData()
         initRecyclerView(this)
-        baslik= intent?.getStringExtra("title").toString()
         baslik_seeall.setText(baslik.toString())
 
     }

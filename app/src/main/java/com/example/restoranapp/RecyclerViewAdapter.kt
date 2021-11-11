@@ -40,5 +40,6 @@ class RecyclerViewAdapter(val listData: List<ulkeler>,val clickListener: ClickLi
     }
     interface ClickListener {
         fun onItemClick(dataModel: ulkeler)
+
     }
 }

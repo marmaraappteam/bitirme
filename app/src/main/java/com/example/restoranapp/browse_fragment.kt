@@ -68,4 +68,6 @@ class browse_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
         TODO("Not yet implemented")
     }
 
+
+
 }
