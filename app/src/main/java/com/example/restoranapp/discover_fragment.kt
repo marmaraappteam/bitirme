@@ -19,6 +19,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.example.myapplication.RecyclerViewAdapter
 import kotlinx.android.synthetic.main.discover_fragment.*
+import androidx.appcompat.app.AppCompatActivity
+
+
+
 
 class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.OnClickListener {
 
@@ -39,7 +43,7 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
         btn.setOnClickListener(this)
         val btn2: TextView = view.findViewById(R.id.seeallbutton2)
         btn2.setOnClickListener(this)
-
+       // (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
         buildDisplayData()
         initRecyclerView(view)
 

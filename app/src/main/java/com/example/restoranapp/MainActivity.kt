@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        supportActionBar?.hide()
 
         supportFragmentManager.beginTransaction().add(R.id.fragment_tutucu,discover_fragment()).commit()
 

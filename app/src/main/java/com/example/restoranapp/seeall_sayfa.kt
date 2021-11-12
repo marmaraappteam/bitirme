@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.RecyclerViewAdapter
+import com.google.android.material.internal.ContextUtils.getActivity
 import kotlinx.android.synthetic.main.activity_seeall_sayfa.*
 
 class seeall_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
@@ -20,7 +21,7 @@ class seeall_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seeall_sayfa)
-
+        supportActionBar?.hide()
         buildDisplayData()
         initRecyclerView(this)
         baslik= intent?.getStringExtra("title").toString()
@@ -50,6 +51,7 @@ class seeall_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
     }
 
     override fun onItemClick(dataModel: ulkeler) {
-        TODO("Not yet implemented")
+        val intent = Intent (this, restoran_sayfa::class.java)
+        this?.startActivity(intent)
     }
 }
