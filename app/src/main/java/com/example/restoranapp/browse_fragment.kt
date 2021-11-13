@@ -18,7 +18,7 @@ class browse_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
 
     private lateinit var adapter: RecyclerViewAdapter
     private lateinit var adapter2: RecyclerViewAdapter
-    val listData: ArrayList<ulkeler> = ArrayList()
+    val listData: ArrayList<urunler> = ArrayList()
 
 
     override fun onCreateView(
@@ -46,10 +46,10 @@ class browse_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
     }
 
     private fun buildDisplayData() {
-        listData.add(ulkeler(1,"salih"))
-        listData.add(ulkeler(2,"ramazan"))
-        listData.add(ulkeler(3,"yasin"))
-        listData.add(ulkeler(4,"imad"))
+        listData.add(urunler(1,"salih","tomorrow","2.5 km","25","5 left"))
+        listData.add(urunler(2,"ramazan","tomorrow","2.5 km","25","5 left"))
+        listData.add(urunler(3,"yasin","tomorrow","2.5 km","25","5 left"))
+        listData.add(urunler(4,"imad","tomorrow","2.5 km","25","5 left"))
     }
 
     companion object{
@@ -64,7 +64,7 @@ class browse_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
 
 
 
-    override fun onItemClick(dataModel: ulkeler) {
+    override fun onItemClick(dataModel: urunler) {
         TODO("Not yet implemented")
     }
 

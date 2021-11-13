@@ -42,10 +42,10 @@
                     android:src="@drawable/restoranlogo1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lastchance" />
+                    app:layout_constraintTop_toBottomOf="@+id/card_kalan" />
 
                 <TextView
-                    android:id="@+id/lastchance"
+                    android:id="@+id/card_kalan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
@@ -57,7 +57,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/cardurun_fiyat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
@@ -110,10 +110,11 @@
                 android:id="@+id/restmesafe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
                 android:layout_marginTop="3dp"
                 android:text="2,3 km"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/restoran_ad"
+                app:layout_constraintStart_toEndOf="@+id/restsiparistarih"
                 app:layout_constraintTop_toBottomOf="@+id/restoran_ad" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
