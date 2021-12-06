@@ -7,38 +7,29 @@
     android:background="#FF2C2C2C">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="1dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
         <TextView
             android:id="@+id/title_seeall"
             android:layout_width="314dp"
-            android:layout_height="30dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_vertical"
-            android:text="Save before it's too late"
+            android:text="Favorilerim"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="43dp"
-            tools:layout_editor_absoluteY="1dp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="555dp"
-            android:layout_marginTop="50dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_favorite"
@@ -46,5 +37,5 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </FrameLayout>

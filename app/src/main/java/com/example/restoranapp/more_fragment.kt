@@ -75,7 +75,9 @@ class more_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
     }
 
     override fun onItemClick(dataModel: urunler) {
-        TODO("Not yet implemented")
+       val intent = Intent (getActivity(), restoran_sayfa::class.java)
+        intent.putExtra("urun_id",dataModel.urun_id.toString())
+        getActivity()?.startActivity(intent)
     }
 
 }

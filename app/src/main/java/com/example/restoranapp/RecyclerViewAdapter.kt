@@ -1,8 +1,11 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
@@ -12,9 +15,17 @@ import com.example.restoranapp.urunler
 import org.w3c.dom.Text
 
 class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickListener): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+    var templistData: ArrayList<urunler> = ArrayList()
+    var templistData2: ArrayList<urunler> = ArrayList()
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewAdapter.MyViewHolder {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.restoran_card,parent,false)
-
+        templistData.addAll(listData)
+        templistData2.add(urunler(1,"asd","tomorrow","2.5 km","25","5 left"))
+        templistData2.add(urunler(2,"ramasdazan","tomorrow","2.5 km","25","5 left"))
+        templistData2.add(urunler(3,"asd","tomorrow","2.5 km","25","5 left"))
+        templistData2.add(urunler(4,"asd","tomorrow","2.5 km","25","5 left"))
         return MyViewHolder(view)
     }
 
@@ -56,4 +67,6 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
         fun onItemClick(dataModel: urunler)
 
     }
+
+
 }
