@@ -1,13 +1,13 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
-import android.widget.TextView
+import android.widget.*
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.restoranapp.R
 import com.example.restoranapp.ulkeler
@@ -41,6 +41,8 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
         var cardview: CardView
         var urun_fiyat_tv: TextView
         var urun_kalan_tv: TextView
+        var fvbutton : ImageButton
+
 
         init {
             titleTextView=view.findViewById(R.id.restoran_ad)
@@ -49,7 +51,9 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
             urun_fiyat_tv=view.findViewById(R.id.cardurun_fiyat)
             urun_kalan_tv=view.findViewById(R.id.card_kalan)
             cardview=view.findViewById(R.id.restorancard_satir)
+            fvbutton=view.findViewById(R.id.favori_button)
         }
+
 
     }
 
@@ -62,9 +66,30 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
         holder.itemView.setOnClickListener{
             clickListener.onItemClick(listData.get(position))
         }
+        if (holder.titleTextView.text=="reno"){
+            holder.fvbutton.setTag("favorite")
+            holder.fvbutton.setImageResource(R.drawable.ic_baseline_favorite_24)
+        }
+        holder.fvbutton.setTag("unfavorite")
+        holder.fvbutton.setOnClickListener{
+            if (holder.fvbutton.getTag()=="unfavorite"){
+                holder.fvbutton.setImageResource(R.drawable.ic_baseline_favorite_24)
+                holder.fvbutton.setTag("favorite")
+
+            }
+            else if(holder.fvbutton.getTag()=="favorite"){
+                holder.fvbutton.setImageResource(R.drawable.ic_baseline_favorite_border_24)
+                holder.fvbutton.setTag("unfavorite")
+
+            }
+
+          //  clickListener.onItemClickfavorite(listData.get(position))
+        }
+
     }
     interface ClickListener {
         fun onItemClick(dataModel: urunler)
+
 
     }
 

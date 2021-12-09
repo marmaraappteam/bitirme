@@ -80,4 +80,6 @@ class more_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
         getActivity()?.startActivity(intent)
     }
 
+
+
 }

@@ -54,4 +54,6 @@ class seeall_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
         val intent = Intent (this, restoran_sayfa::class.java)
         this?.startActivity(intent)
     }
+
+
 }

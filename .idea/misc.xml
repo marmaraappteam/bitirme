@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/drawable/custombuton.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/drawable/ic_baseline_explore_24.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/drawable/ic_baseline_filter_alt_24.xml" value="0.1" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.20833333333333334" />
@@ -18,9 +19,10 @@
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/activity_seeall_sayfa.xml" value="0.33" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/browse_fragment.xml" value="0.25" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/discover_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/filtre_fragmet.xml" value="0.1921875" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/more_fragment.xml" value="0.33" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/recycler_row1.xml" value="0.153125" />
-        <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/restanasayfacard.xml" value="0.1921875" />
+        <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/restanasayfacard.xml" value="0.67" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/restoran_card.xml" value="0.33" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/restoran_sayfa.xml" value="0.1921875" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/menu/bottom_menu.xml" value="0.1921875" />

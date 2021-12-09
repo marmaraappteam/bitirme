@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.RecyclerViewAdapter
 import kotlinx.android.synthetic.main.browse_fragment.*
 import kotlinx.android.synthetic.main.discover_fragment.*
+import kotlinx.android.synthetic.main.restoran_card.*
 import java.util.*
 import kotlin.collections.ArrayList
 

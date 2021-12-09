@@ -51,7 +51,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textView8"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/changebuton"
                 android:layout_width="100dp"
                 android:layout_height="32dp"

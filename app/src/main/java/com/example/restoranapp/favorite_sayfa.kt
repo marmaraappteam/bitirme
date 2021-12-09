@@ -47,4 +47,6 @@ class favorite_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
     override fun onItemClick(dataModel: urunler) {
         TODO("Not yet implemented")
     }
+
+
 }
