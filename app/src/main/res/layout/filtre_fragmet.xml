@@ -6,18 +6,228 @@
     android:layout_height="match_parent"
     tools:context=".filtre_fragmet">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#FF2C2C2C">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custombuton"
-        android:text="Button"
-        app:icon="@drawable/ic_baseline_favorite_border_24" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button15"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/filtre_button"
+            android:text="Uygula"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button14" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button14"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/filtre_button"
+            android:text="Sıfırla"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button15"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button10"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@drawable/filtre_button"
+                android:drawableRight="@drawable/ic_baseline_star_24"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button11"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/filtre_button"
+                android:drawableRight="@drawable/ic_baseline_star_24"
+                android:text="4"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button12"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/filtre_button"
+                android:drawableRight="@drawable/ic_baseline_star_24"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button13"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/filtre_button"
+                android:drawableRight="@drawable/ic_baseline_star_24"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button9"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/filtre_button"
+                android:drawableRight="@drawable/ic_baseline_star_24"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp"
+            android:text="Puan"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/filtre_button"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:text="Restoran"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            app:layout_constraintStart_toEndOf="@+id/button7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button7"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/filtre_button"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:text="Hepsi"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button6"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="131dp"
+            android:background="@drawable/filtre_button"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:text="Market"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button5"
+            app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button5"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/filtre_button"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:text="Tatlı"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button4"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/filtre_button"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:text="Fırın"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="96dp"
+            android:background="@drawable/filtre_button"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:text="Kafe"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Kategori"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
