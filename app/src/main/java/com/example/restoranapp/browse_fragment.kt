@@ -91,10 +91,10 @@ class browse_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
     }
 
     private fun buildDisplayData() {
-        listData.add(urunler(1,"salih","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(2,"ramazan","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(3,"yasin","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(4,"imad","tomorrow","2.5 km","25","5 left"))
+        listData.add(urunler(1,"Çınar Pide Fırın","Yarın","2.5 km","25","Son 5 Ürün"))
+        listData.add(urunler(2,"Simit Sarayı","Yarın","2.5 km","25","Son 5 Ürün"))
+        listData.add(urunler(3,"Vedat Usta","Yarın","2.5 km","25","Son 5 Ürün"))
+        listData.add(urunler(4,"Waffle","Yarın","2.5 km","25","Son 5 Ürün"))
 
 
     }
@@ -112,9 +112,14 @@ class browse_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
 
 
     override fun onItemClick(dataModel: urunler) {
-         val intent = Intent (getActivity(), restoran_sayfa::class.java)
-        intent.putExtra("urun_id",dataModel.urun_id.toString())
-        getActivity()?.startActivity(intent)
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        transaction?.replace(R.id.fragment_tutucu, restoran_sayfa_fragment())
+        transaction?.disallowAddToBackStack()
+        transaction?.commit()
+
+    //val intent = Intent (getActivity(), restoran_sayfa::class.java)
+        //intent.putExtra("urun_id",dataModel.urun_id.toString())
+        //getActivity()?.startActivity(intent)
     }
 
 

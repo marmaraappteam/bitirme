@@ -9,9 +9,9 @@
     <item
         android:id="@+id/bottom_browse"
         android:icon="@drawable/ic_baseline_shopping_bag_24"
-        android:title="Tarama" />
+        android:title="Dükkanlar" />
     <item
         android:id="@+id/bottom_more"
         android:icon="@drawable/ic_baseline_more_horiz_24"
-        android:title="More" />
+        android:title="Favoriler" />
 </menu>

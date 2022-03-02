@@ -51,8 +51,8 @@ class seeall_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
     }
 
     override fun onItemClick(dataModel: urunler) {
-        val intent = Intent (this, restoran_sayfa::class.java)
-        this?.startActivity(intent)
+        //val intent = Intent (this, restoran_sayfa::class.java)
+        //this?.startActivity(intent)
     }
 
 

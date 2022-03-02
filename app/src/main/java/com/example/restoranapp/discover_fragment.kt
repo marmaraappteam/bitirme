@@ -105,9 +105,9 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
 
 
     override fun onItemClick(dataModel: urunler) {
-        val intent = Intent (getActivity(), restoran_sayfa::class.java)
-        intent.putExtra("urun_id",dataModel.urun_id.toString())
-        getActivity()?.startActivity(intent)
+       // val intent = Intent (getActivity(), restoran_sayfa::class.java)
+        //intent.putExtra("urun_id",dataModel.urun_id.toString())
+        //getActivity()?.startActivity(intent)
     }
 
 

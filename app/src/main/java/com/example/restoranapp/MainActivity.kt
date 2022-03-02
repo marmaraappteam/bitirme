@@ -4,11 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.restoranapp.R.id.custom_toolbar
 import kotlinx.android.synthetic.main.activity_main.*
 
+import kotlinx.android.synthetic.main.custom_toolbar.*
+import kotlinx.android.synthetic.main.custom_toolbar.custom_toolbar as custom_toolbar1
+
 class MainActivity : AppCompatActivity() {
+
 
     private lateinit var tempFragment:Fragment
 
@@ -18,7 +24,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.hide()
+       // supportActionBar?.hide() //toolbarı gizler
+      // setSupportActionBar(custom_toolbar as androidx.appcompat.widget.Toolbar?)
+
+
+
+
+
+
+
+       // supportActionBar?.setTitle("İsrafa Son")
 
         supportFragmentManager.beginTransaction().add(R.id.fragment_tutucu,discover_fragment()).commit()
 

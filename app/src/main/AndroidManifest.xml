@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restoranapp">
         <activity
+            android:name=".urun_sayfasi"
+            android:exported="true" />
+        <activity
+            android:name=".restoran_anasayfa"
+            android:exported="true" />
+        <activity
             android:name=".favorite_sayfa"
             android:exported="true" />
         <activity
