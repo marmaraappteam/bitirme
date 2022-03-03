@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Restoranapp">
         <activity
+            android:name=".konum_bilgisi"
+            android:exported="true" />
+        <activity
+            android:name=".sepetim"
+            android:exported="true" />
+        <activity
             android:name=".urun_sayfasi"
             android:exported="true" />
         <activity

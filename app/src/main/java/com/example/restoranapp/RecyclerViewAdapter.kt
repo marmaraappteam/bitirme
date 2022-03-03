@@ -39,7 +39,7 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
         var siparistarih_tv:TextView
         var mesafe_tv:TextView
         var cardview: CardView
-        var urun_fiyat_tv: TextView
+
         var urun_kalan_tv: TextView
         var fvbutton : ImageButton
 
@@ -48,7 +48,7 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
             titleTextView=view.findViewById(R.id.restoran_ad)
             siparistarih_tv=view.findViewById(R.id.restsiparistarih)
             mesafe_tv=view.findViewById(R.id.restmesafe)
-            urun_fiyat_tv=view.findViewById(R.id.cardurun_fiyat)
+
             urun_kalan_tv=view.findViewById(R.id.card_kalan)
             cardview=view.findViewById(R.id.restorancard_satir)
             fvbutton=view.findViewById(R.id.favori_button)
@@ -61,7 +61,6 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
         holder.titleTextView.text = listData.get(position).restoran_ad
         holder.siparistarih_tv.text = listData.get(position).teslim_tarihi
         holder.mesafe_tv.text = listData.get(position).mesafe
-        holder.urun_fiyat_tv.text = listData.get(position).urun_fiyat
         holder.urun_kalan_tv.text = listData.get(position).kalansayisi
         holder.itemView.setOnClickListener{
             clickListener.onItemClick(listData.get(position))

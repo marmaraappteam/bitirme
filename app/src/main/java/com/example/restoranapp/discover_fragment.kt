@@ -3,14 +3,13 @@ package com.example.restoranapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatImageButton
 
 import androidx.fragment.app.Fragment
 
@@ -20,7 +19,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.example.myapplication.RecyclerViewAdapter
 import kotlinx.android.synthetic.main.discover_fragment.*
-import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.restoran_card.*
 
 
@@ -42,6 +40,8 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
         val btn: TextView = view.findViewById(R.id.seeallbutton1)
         btn.setOnClickListener(this)
         val btn2: TextView = view.findViewById(R.id.seeallbutton2)
+        btn2.setOnClickListener(this)
+        val change_btn: AppCompatImageButton = view.findViewById(R.id.changebuton)
         btn2.setOnClickListener(this)
 
 
@@ -93,9 +93,10 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
 
 
         changebuton.setOnClickListener{
-           // val intent = Intent (getActivity(), restoran_sayfa::class.java)
-            //getActivity()?.startActivity(intent)
-            changebuton.setImageResource(R.drawable.ic_baseline_favorite_24)
+
+           val intent = Intent (getActivity(), konum_bilgisi::class.java)
+            getActivity()?.startActivity(intent)
+           // changebuton.setImageResource(R.drawable.ic_baseline_favorite_24)
         }
 
 
@@ -129,12 +130,8 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
                 getActivity()?.startActivity(intent)
             }
         }
-        when (p0?.id) {
-            R.id.favori_button -> {
 
 
-            }
-        }
     }
 
 

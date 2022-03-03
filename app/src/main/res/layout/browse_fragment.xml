@@ -50,7 +50,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/changebuton"
+                android:id="@+id/changebuton2"
                 android:layout_width="100dp"
                 android:layout_height="32dp"
                 android:background="@drawable/custombuton"

@@ -75,6 +75,13 @@ class browse_fragment : Fragment(), RecyclerViewAdapter.ClickListener {
 
         })
 
+        changebuton2.setOnClickListener{
+
+            val intent = Intent (getActivity(), konum_bilgisi::class.java)
+            getActivity()?.startActivity(intent)
+            // changebuton.setImageResource(R.drawable.ic_baseline_favorite_24)
+        }
+
     }
 
     private fun initRecyclerView(view: View) {

@@ -1,5 +1,6 @@
 package com.example.restoranapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -8,7 +9,9 @@ import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.restoranapp.R.id.custom_toolbar
+import com.google.android.material.internal.ContextUtils.getActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.browse_fragment.*
 
 import kotlinx.android.synthetic.main.custom_toolbar.*
 import kotlinx.android.synthetic.main.custom_toolbar.custom_toolbar as custom_toolbar1
@@ -27,6 +30,12 @@ class MainActivity : AppCompatActivity() {
        // supportActionBar?.hide() //toolbarı gizler
       // setSupportActionBar(custom_toolbar as androidx.appcompat.widget.Toolbar?)
 
+        textView21.setOnClickListener{
+
+            val intent = Intent (this, sepetim::class.java)
+            //intent.putExtra("urun_id",dataModel.urun_id.toString())
+            startActivity(intent)
+        }
 
 
 
@@ -60,5 +69,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
 
 }
