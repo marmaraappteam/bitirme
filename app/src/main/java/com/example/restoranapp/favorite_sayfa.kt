@@ -12,7 +12,7 @@ class favorite_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
     private lateinit var adapter: RecyclerViewAdapter
     private lateinit var adapter2: RecyclerViewAdapter
 
-    val listData: ArrayList<urunler> = ArrayList()
+    val listData: ArrayList<isletmeler> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,13 +38,13 @@ class favorite_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
     }
 
     private fun buildDisplayData() {
-        listData.add(urunler(1,"BMW","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(2,"veyt","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(3,"reno","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(4,"BferrerMW","tomorrow","2.5 km","25","5 left"))
+        listData.add(isletmeler(1,"BMW","tomorrow","2.5 km","25","5 left","Fırın"))
+        listData.add(isletmeler(2,"veyt","tomorrow","2.5 km","25","5 left","Fırın"))
+        listData.add(isletmeler(3,"reno","tomorrow","2.5 km","25","5 left","Fırın"))
+        listData.add(isletmeler(4,"BferrerMW","tomorrow","2.5 km","25","5 left","Fırın"))
     }
 
-    override fun onItemClick(dataModel: urunler) {
+    override fun onItemClick(dataModel: isletmeler) {
         TODO("Not yet implemented")
     }
 

@@ -16,10 +16,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import androidx.recyclerview.widget.RecyclerView
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 
 import com.example.myapplication.RecyclerViewAdapter
 import kotlinx.android.synthetic.main.discover_fragment.*
 import kotlinx.android.synthetic.main.restoran_card.*
+import org.json.JSONException
+import org.json.JSONObject
 
 
 class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.OnClickListener {
@@ -27,7 +32,8 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
     private lateinit var adapter: RecyclerViewAdapter
     private lateinit var adapter2: RecyclerViewAdapter
 
-    val listData: ArrayList<urunler> = ArrayList()
+    val listData: ArrayList<isletmeler> = ArrayList()
+    val templistData: ArrayList<isletmeler> = ArrayList()
 
 
     override fun onCreateView(
@@ -44,9 +50,9 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
         val change_btn: AppCompatImageButton = view.findViewById(R.id.changebuton)
         btn2.setOnClickListener(this)
 
-
-       // (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
-        buildDisplayData()
+        //buildDisplayData()
+        isletme_cek(view)
+        urun_cek_fırın(view)
         initRecyclerView(view)
 
 
@@ -56,23 +62,94 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
 
     private fun initRecyclerView(view: View) {
         val recyclerView=view.findViewById<RecyclerView>(R.id.recyclerView)
-        val recyclerView2=view.findViewById<RecyclerView>(R.id.recyclerView2)
         recyclerView.layoutManager=LinearLayoutManager(activity)
-        recyclerView2.layoutManager=LinearLayoutManager(activity)
         (recyclerView.layoutManager as LinearLayoutManager).orientation=LinearLayoutManager.HORIZONTAL
-        (recyclerView2.layoutManager as LinearLayoutManager).orientation=LinearLayoutManager.HORIZONTAL
         adapter =  RecyclerViewAdapter(listData,this)
-        adapter2 =  RecyclerViewAdapter(listData,this)
         recyclerView.adapter = adapter
+
+
+        val recyclerView2=view.findViewById<RecyclerView>(R.id.recyclerView2)
+        recyclerView2.layoutManager=LinearLayoutManager(activity)
+        (recyclerView2.layoutManager as LinearLayoutManager).orientation=LinearLayoutManager.HORIZONTAL
+        adapter2 =  RecyclerViewAdapter(templistData,this)
         recyclerView2.adapter = adapter2
     }
 
-    private fun buildDisplayData() {
-        listData.add(urunler(1,"BMW","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(2,"veyt","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(3,"reno","tomorrow","2.5 km","25","5 left"))
-        listData.add(urunler(4,"BferrerMW","tomorrow","2.5 km","25","5 left"))
+    private fun urun_cek_fırın(view: View){
+        val url="http://192.168.43.114/restoranapp/tum_isletmeler.php"
+
+        val istek : StringRequest = object : StringRequest(Method.GET,url, Response.Listener { cevap ->
+
+
+            try {
+
+                val jsonObject= JSONObject(cevap)
+                val isletmelerListe=jsonObject.getJSONArray("isletmeler")
+
+
+
+                for (i in 0 until isletmelerListe.length()){
+                    val k=isletmelerListe.getJSONObject(i)
+                    if (k.getString("isletme_tur")=="Fırın"){
+
+                        templistData.add(isletmeler(k.getInt("isletme_id"),k.getString("isletme_ad"),k.getString("isletme_konum"),k.getString("isletme_asaat"),k.getString("isletme_ksaat"),k.getString("isletme_point"),k.getString("isletme_tur")))
+
+                    }
+
+                    initRecyclerView(view)
+
+                }
+
+            }catch (e: JSONException){
+
+            }
+
+
+
+        }, Response.ErrorListener { e -> e.printStackTrace() }){}
+
+        Volley.newRequestQueue(context).add(istek)
     }
+
+    private fun isletme_cek(view: View){
+        val url="http://192.168.43.114/restoranapp/tum_isletmeler.php"
+
+        val istek : StringRequest = object : StringRequest(Method.GET,url, Response.Listener { cevap ->
+
+            // Log.e("silmecevap2",cevap)
+
+            try {
+
+                val jsonObject= JSONObject(cevap)
+                val isletmelerListe=jsonObject.getJSONArray("isletmeler")
+
+
+
+                for (i in 0 until isletmelerListe.length()){
+                    val k=isletmelerListe.getJSONObject(i)
+                    listData.add(isletmeler(k.getInt("isletme_id"),k.getString("isletme_ad"),k.getString("isletme_konum"),k.getString("isletme_asaat"),k.getString("isletme_ksaat"),k.getString("isletme_point"),k.getString("isletme_tur")))
+
+                    initRecyclerView(view)
+
+                }
+
+            }catch (e: JSONException){
+
+            }
+
+
+
+        }, Response.ErrorListener { e -> e.printStackTrace() }){}
+
+        Volley.newRequestQueue(context).add(istek)
+    }
+
+/*    private fun buildDisplayData() {
+        listData.add(isletmeler(1,"BMW","tomorrow","2.5 km","25","5 left","fırın"))
+        listData.add(isletmeler(2,"veyt","tomorrow","2.5 km","25","5 left","fırın"))
+        listData.add(isletmeler(3,"reno","tomorrow","2.5 km","25","5 left","fırın"))
+        listData.add(isletmeler(4,"BferrerMW","tomorrow","2.5 km","25","5 left","fırın"))
+    }*/
 
     companion object{
         @JvmStatic
@@ -105,10 +182,16 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
     }
 
 
-    override fun onItemClick(dataModel: urunler) {
-       // val intent = Intent (getActivity(), restoran_sayfa::class.java)
-        //intent.putExtra("urun_id",dataModel.urun_id.toString())
-        //getActivity()?.startActivity(intent)
+    override fun onItemClick(dataModel: isletmeler) {
+        val bundle = Bundle()
+        val frag=restoran_sayfa_fragment()
+
+        bundle.putString("isletme_id", dataModel.isletme_id.toString())
+        frag.arguments=bundle
+        val transaction = activity?.supportFragmentManager?.beginTransaction()
+        transaction?.replace(R.id.fragment_tutucu, frag)
+        transaction?.disallowAddToBackStack()
+        transaction?.commit()
     }
 
 
@@ -120,8 +203,6 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
                     intent.putExtra("title",baslik1.text)
                     getActivity()?.startActivity(intent)
                 }
-       /* else -> {
-        }*/
             }
         when (p0?.id) {
             R.id.seeallbutton2 -> {

@@ -30,7 +30,7 @@
             app:layout_constraintTop_toBottomOf="@+id/urun_resim">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/product_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -44,7 +44,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/product_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -67,7 +67,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView12">
 
             <TextView
-                android:id="@+id/deneme"
+                android:id="@+id/product_desc"
                 android:layout_width="320dp"
                 android:layout_height="77dp"
 

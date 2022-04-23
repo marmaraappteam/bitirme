@@ -17,7 +17,7 @@
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/drawable/ic_baseline_shopping_bag_24.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/drawable/urunturcustom_button.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/activity_favorite_sayfa.xml" value="0.1921875" />
-        <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/activity_konum_bilgisi.xml" value="0.1921875" />
+        <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/activity_konum_bilgisi.xml" value="0.33" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/activity_restoran_anasayfa.xml" value="0.33" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/activity_restoran_sayfa.xml" value="0.2" />
@@ -30,7 +30,7 @@
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/custom_toolbar.xml" value="0.33" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/discover_fragment.xml" value="0.25" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/filtre_fragmet.xml" value="0.25" />
-        <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/fragment_restoran_sayfa_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/fragment_restoran_sayfa_fragment.xml" value="0.33" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/fragment_urun_sayfasi.xml" value="0.25" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/items_sehir.xml" value="0.1921875" />
         <entry key="..\:/Users/salihokur/Desktop/bitirmekotlin/app/src/main/res/layout/more_fragment.xml" value="0.33" />

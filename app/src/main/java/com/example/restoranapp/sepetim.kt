@@ -18,7 +18,7 @@ class sepetim : AppCompatActivity() , sepetim_recyviewadapter.ClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sepetim)
 
-        buildDisplayData()
+        //buildDisplayData()
         templistData.addAll(listData)
         initRecyclerView(sepet_urunrv.rootView)
 
@@ -37,7 +37,7 @@ class sepetim : AppCompatActivity() , sepetim_recyviewadapter.ClickListener {
 
     }
 
-    private fun buildDisplayData() {
+    /*private fun buildDisplayData() {
         listData.add(urunler(1,"Çınar Pide Fırın","Yarın","2.5 km","25","Son 5 Ürün"))
         listData.add(urunler(2,"Simit Sarayı","Yarın","2.5 km","25","Son 5 Ürün"))
         listData.add(urunler(3,"Vedat Usta","Yarın","2.5 km","25","Son 5 Ürün"))
@@ -45,7 +45,7 @@ class sepetim : AppCompatActivity() , sepetim_recyviewadapter.ClickListener {
         listData.add(urunler(4,"Waffle","Yarın","2.5 km","25","Son 5 Ürün"))
 
 
-    }
+    }*/
 
 
 

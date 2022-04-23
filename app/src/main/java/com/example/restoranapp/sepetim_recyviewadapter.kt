@@ -22,10 +22,10 @@ class sepetim_recyviewadapter(val listData: List<urunler>, val clickListener: Cl
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): sepetim_recyviewadapter.MyViewHolder {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.card_sepetim,parent,false)
         templistData.addAll(listData)
-        templistData2.add(urunler(1,"asd","tomorrow","2.5 km","25","5 left"))
-        templistData2.add(urunler(2,"ramasdazan","tomorrow","2.5 km","25","5 left"))
-        templistData2.add(urunler(3,"asd","tomorrow","2.5 km","25","5 left"))
-        templistData2.add(urunler(4,"asd","tomorrow","2.5 km","25","5 left"))
+        templistData2.add(urunler(1,1,"tomorrow","2.5 km","25","5 left"))
+        templistData2.add(urunler(2,1,"tomorrow","2.5 km","25","5 left"))
+        templistData2.add(urunler(3,1,"tomorrow","2.5 km","25","5 left"))
+        templistData2.add(urunler(4,1,"tomorrow","2.5 km","25","5 left"))
         return MyViewHolder(view)
     }
 
@@ -58,10 +58,10 @@ class sepetim_recyviewadapter(val listData: List<urunler>, val clickListener: Cl
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.urun_ad.text = listData.get(position).restoran_ad
-        holder.urun_fiyat.text = listData.get(position).teslim_tarihi
+        holder.urun_ad.text = listData.get(position).product_name
+        holder.urun_fiyat.text = listData.get(position).product_desc
         //  holder.mesafe_tv.text = listData.get(position).mesafe
-        holder.urun_sayi.text = listData.get(position).urun_fiyat
+        holder.urun_sayi.text = listData.get(position).product_price
 
         holder.itemView.setOnClickListener{
             clickListener.onItemClick(listData.get(position))

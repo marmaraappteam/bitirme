@@ -10,22 +10,23 @@ import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.restoranapp.R
+import com.example.restoranapp.isletmeler
 import com.example.restoranapp.ulkeler
 import com.example.restoranapp.urunler
 import org.w3c.dom.Text
 
-class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickListener): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
-    var templistData: ArrayList<urunler> = ArrayList()
-    var templistData2: ArrayList<urunler> = ArrayList()
+class RecyclerViewAdapter(val listData: List<isletmeler>, val clickListener: ClickListener): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+   // var templistData: ArrayList<isletmeler> = ArrayList()
+    //var templistData2: ArrayList<isletmeler> = ArrayList()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewAdapter.MyViewHolder {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.restoran_card,parent,false)
-        templistData.addAll(listData)
-        templistData2.add(urunler(1,"asd","tomorrow","2.5 km","25","5 left"))
-        templistData2.add(urunler(2,"ramasdazan","tomorrow","2.5 km","25","5 left"))
-        templistData2.add(urunler(3,"asd","tomorrow","2.5 km","25","5 left"))
-        templistData2.add(urunler(4,"asd","tomorrow","2.5 km","25","5 left"))
+     //   templistData.addAll(listData)
+      //  templistData2.add(isletmeler(1,"asd","tomorrow","2.5 km","25","5 left","Fırın"))
+       // templistData2.add(isletmeler(2,"ramasdazan","tomorrow","2.5 km","25","5 left","Fırın"))
+       // templistData2.add(isletmeler(3,"asd","tomorrow","2.5 km","25","5 left","Fırın"))
+       // templistData2.add(isletmeler(4,"asd","tomorrow","2.5 km","25","5 left","Fırın"))
         return MyViewHolder(view)
     }
 
@@ -58,10 +59,10 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.titleTextView.text = listData.get(position).restoran_ad
-        holder.siparistarih_tv.text = listData.get(position).teslim_tarihi
-        holder.mesafe_tv.text = listData.get(position).mesafe
-        holder.urun_kalan_tv.text = listData.get(position).kalansayisi
+        holder.titleTextView.text = listData.get(position).isletme_ad
+        holder.siparistarih_tv.text = listData.get(position).isletme_asaat
+        holder.mesafe_tv.text = listData.get(position).isletme_konum
+        holder.urun_kalan_tv.text = listData.get(position).isletme_point
         holder.itemView.setOnClickListener{
             clickListener.onItemClick(listData.get(position))
         }
@@ -87,7 +88,7 @@ class RecyclerViewAdapter(val listData: List<urunler>, val clickListener: ClickL
 
     }
     interface ClickListener {
-        fun onItemClick(dataModel: urunler)
+        fun onItemClick(dataModel: isletmeler)
 
 
     }

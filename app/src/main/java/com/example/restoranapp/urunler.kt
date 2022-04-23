@@ -1,4 +1,4 @@
 package com.example.restoranapp
 //kalan miktar constructıra eklenecek
-data class urunler(var urun_id:Int?,var restoran_ad:String? , var teslim_tarihi:String? ,var mesafe:String?, var urun_fiyat:String?,var kalansayisi:String?) {
+data class urunler(var product_id:Int?,var isletme_id:Int?,var product_name:String? , var product_desc:String? ,var product_price:String?, var product_amount:String?) {
 }
