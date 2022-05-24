@@ -92,7 +92,7 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
                     val k=isletmelerListe.getJSONObject(i)
                     if (k.getString("isletme_tur")=="Fırın"){
 
-                        templistData.add(isletmeler(k.getInt("isletme_id"),k.getString("isletme_ad"),k.getString("isletme_konum"),k.getString("isletme_asaat"),k.getString("isletme_ksaat"),k.getString("isletme_point"),k.getString("isletme_tur")))
+                        templistData.add(isletmeler(k.getInt("isletme_id"),k.getString("isletme_ad"),k.getString("isletme_konum"),k.getString("isletme_asaat"),k.getString("isletme_ksaat"),k.getString("isletme_point"),k.getString("isletme_tur"),false))
 
                     }
 
@@ -127,7 +127,7 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
 
                 for (i in 0 until isletmelerListe.length()){
                     val k=isletmelerListe.getJSONObject(i)
-                    listData.add(isletmeler(k.getInt("isletme_id"),k.getString("isletme_ad"),k.getString("isletme_konum"),k.getString("isletme_asaat"),k.getString("isletme_ksaat"),k.getString("isletme_point"),k.getString("isletme_tur")))
+                    listData.add(isletmeler(k.getInt("isletme_id"),k.getString("isletme_ad"),k.getString("isletme_konum"),k.getString("isletme_asaat"),k.getString("isletme_ksaat"),k.getString("isletme_point"),k.getString("isletme_tur"),false))
 
                     initRecyclerView(view)
 
@@ -194,6 +194,9 @@ class discover_fragment : Fragment(), RecyclerViewAdapter.ClickListener , View.O
         transaction?.commit()
     }
 
+    override fun onfvbuttonclick(fvModel: isletmeler) {
+        TODO("Not yet implemented")
+    }
 
 
     override fun onClick(p0: View?) {

@@ -63,18 +63,35 @@ class RecyclerViewAdapter(val listData: List<isletmeler>, val clickListener: Cli
         holder.siparistarih_tv.text = listData.get(position).isletme_asaat
         holder.mesafe_tv.text = listData.get(position).isletme_konum
         holder.urun_kalan_tv.text = listData.get(position).isletme_point
+        if (listData.get(position).isFavorite==true){
+            holder.fvbutton.setImageResource(R.drawable.ic_baseline_favorite_24)
+            holder.fvbutton.setTag("favorite")
+        }
+        if (listData.get(position).isFavorite==false){
+            holder.fvbutton.setImageResource(R.drawable.ic_baseline_favorite_border_24)
+            holder.fvbutton.setTag("unfavorite")
+        }
+        holder.fvbutton.setOnClickListener{
+
+            clickListener.onfvbuttonclick(listData.get(position))
+        }
         holder.itemView.setOnClickListener{
             clickListener.onItemClick(listData.get(position))
         }
+
         if (holder.titleTextView.text=="reno"){
             holder.fvbutton.setTag("favorite")
             holder.fvbutton.setImageResource(R.drawable.ic_baseline_favorite_24)
         }
+
         holder.fvbutton.setTag("unfavorite")
-        holder.fvbutton.setOnClickListener{
+        /*holder.fvbutton.setOnClickListener{
             if (holder.fvbutton.getTag()=="unfavorite"){
                 holder.fvbutton.setImageResource(R.drawable.ic_baseline_favorite_24)
                 holder.fvbutton.setTag("favorite")
+
+
+
 
             }
             else if(holder.fvbutton.getTag()=="favorite"){
@@ -84,14 +101,15 @@ class RecyclerViewAdapter(val listData: List<isletmeler>, val clickListener: Cli
             }
 
           //  clickListener.onItemClickfavorite(listData.get(position))
-        }
+        }*/
 
     }
     interface ClickListener {
         fun onItemClick(dataModel: isletmeler)
-
+        fun onfvbuttonclick(fvModel: isletmeler)
 
     }
+
 
 
 }

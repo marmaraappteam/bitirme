@@ -12,7 +12,7 @@
         android:background="#FF2C2C2C">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button15"
+            android:id="@+id/btn_filterapply"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
@@ -24,10 +24,10 @@
             android:textColor="@color/teal_700"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button14" />
+            app:layout_constraintStart_toEndOf="@+id/btn_fsifirla" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button14"
+            android:id="@+id/btn_fsifirla"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_marginStart="80dp"
@@ -38,73 +38,78 @@
             android:textAlignment="center"
             android:textColor="@color/teal_700"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button15"
+            app:layout_constraintEnd_toStartOf="@+id/btn_filterapply"
             app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
+            android:layout_width="410dp"
             android:layout_height="50dp"
             android:layout_marginTop="100dp"
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button6">
+            app:layout_constraintTop_toBottomOf="@+id/btn_fmarket">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button10"
-                android:layout_width="50dp"
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/point_5"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:background="@drawable/filtre_button"
                 android:drawableRight="@drawable/ic_baseline_star_24"
                 android:text="5"
-                android:textAlignment="center"
-                android:textColor="@color/teal_700" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/teal_700"
+                android:textSize="20sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button11"
-                android:layout_width="50dp"
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/point_4"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/filtre_button"
                 android:drawableRight="@drawable/ic_baseline_star_24"
                 android:text="4"
-                android:textAlignment="center"
-                android:textColor="@color/teal_700" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/teal_700"
+                android:textSize="20sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button12"
-                android:layout_width="50dp"
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/point_3"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/filtre_button"
                 android:drawableRight="@drawable/ic_baseline_star_24"
                 android:text="3"
-                android:textAlignment="center"
-                android:textColor="@color/teal_700" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/teal_700"
+                android:textSize="20sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button13"
-                android:layout_width="50dp"
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/point_2"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/filtre_button"
                 android:drawableRight="@drawable/ic_baseline_star_24"
                 android:text="2"
-                android:textAlignment="center"
-                android:textColor="@color/teal_700" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/teal_700"
+                android:textSize="20sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button9"
-                android:layout_width="50dp"
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/point_1"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/filtre_button"
                 android:drawableRight="@drawable/ic_baseline_star_24"
                 android:text="1"
-                android:textAlignment="center"
-                android:textColor="@color/teal_700" />
+                android:textAlignment="textEnd"
+                android:textColor="@color/teal_700"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <TextView
@@ -117,95 +122,91 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button7" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_fhepsi" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button8"
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/btn_frestoran"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="96dp"
             android:background="@drawable/filtre_button"
-            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
             android:text="Restoran"
-            android:textAlignment="center"
             android:textColor="@color/teal_700"
-            app:layout_constraintStart_toEndOf="@+id/button7"
+            app:layout_constraintStart_toEndOf="@+id/btn_fhepsi"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button7"
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/btn_fhepsi"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/filtre_button"
-            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
             android:text="Hepsi"
             android:textAlignment="center"
             android:textColor="@color/teal_700"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button6"
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/btn_fmarket"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="17dp"
             android:layout_marginEnd="131dp"
             android:background="@drawable/filtre_button"
-            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
             android:text="Market"
             android:textAlignment="center"
             android:textColor="@color/teal_700"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button5"
-            app:layout_constraintTop_toBottomOf="@+id/button8" />
+            app:layout_constraintStart_toEndOf="@+id/btn_ftatli"
+            app:layout_constraintTop_toBottomOf="@+id/btn_frestoran" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button5"
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/btn_ftatli"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_marginStart="110dp"
             android:layout_marginTop="17dp"
             android:background="@drawable/filtre_button"
-            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
             android:text="Tatlı"
             android:textAlignment="center"
             android:textColor="@color/teal_700"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button8" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_frestoran" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button4"
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/btn_ffirin"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="96dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/filtre_button"
-            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
             android:text="Fırın"
             android:textAlignment="center"
             android:textColor="@color/teal_700"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintStart_toEndOf="@+id/btn_fkafe"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/btn_fkafe"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="96dp"
             android:background="@drawable/filtre_button"
-            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+
             android:text="Kafe"
             android:textAlignment="center"
             android:textColor="@color/teal_700"
-            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintStart_toEndOf="@+id/btn_frestoran"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- android:drawableLeft="@drawable/ic_baseline_arrow_back_24" -->
 
         <TextView
             android:id="@+id/textView6"

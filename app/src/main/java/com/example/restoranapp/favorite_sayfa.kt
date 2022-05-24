@@ -38,13 +38,17 @@ class favorite_sayfa : AppCompatActivity(), RecyclerViewAdapter.ClickListener {
     }
 
     private fun buildDisplayData() {
-        listData.add(isletmeler(1,"BMW","tomorrow","2.5 km","25","5 left","Fırın"))
-        listData.add(isletmeler(2,"veyt","tomorrow","2.5 km","25","5 left","Fırın"))
-        listData.add(isletmeler(3,"reno","tomorrow","2.5 km","25","5 left","Fırın"))
-        listData.add(isletmeler(4,"BferrerMW","tomorrow","2.5 km","25","5 left","Fırın"))
+        listData.add(isletmeler(1,"BMW","tomorrow","2.5 km","25","5 left","Fırın",false))
+        listData.add(isletmeler(2,"veyt","tomorrow","2.5 km","25","5 left","Fırın",false))
+        listData.add(isletmeler(3,"reno","tomorrow","2.5 km","25","5 left","Fırın",false))
+        listData.add(isletmeler(4,"BferrerMW","tomorrow","2.5 km","25","5 left","Fırın",false))
     }
 
     override fun onItemClick(dataModel: isletmeler) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onfvbuttonclick(fvModel: isletmeler) {
         TODO("Not yet implemented")
     }
 
